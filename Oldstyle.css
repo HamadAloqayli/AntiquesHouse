@@ -1,0 +1,1753 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root
+{
+    --main-en-color: #721011;
+    --main-en-font: 'Prociono', serif;
+    --main-bg: url('img/mainImg2.jpg');
+    --main-ar-color: #bdc3c7;
+    --main-ar-font: 'Cairo', sans-serif;
+}
+/* html
+{
+    font-size: calc(0.5vw + 0.5rem);
+} */
+html
+{
+    scroll-behavior: smooth;
+}
+body
+{
+    background-color: #f4f4f4;
+    cursor: default;
+    font-family: var(--main-ar-font);
+}
+a
+{
+    text-decoration: none;
+}
+a:hover
+{
+    text-decoration: none;
+}
+                                                           /* Nav section*/
+nav
+{
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+    padding: 1rem;
+}
+nav a
+{
+    color: var(--main-ar-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+nav span
+{
+    color: var(--main-ar-color);
+    font-size: 1.3rem;
+    transition: all 0.2s ease-in-out;
+}
+nav a:hover span, nav a:hover
+{
+    color: var(--main-en-color);
+    text-decoration: none;
+}
+.holdNav
+{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.dropdown-toggle::after
+{
+    display: none;
+}
+.dropdown-menu
+{
+    position: relative;
+    top: 100%;
+    left: 50% !important;
+    z-index: 1;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: .5rem 0;
+    margin: auto !important;
+    font-size: 1rem;
+    text-align: center !important;
+    list-style: none;
+    background-color: transparent;
+    background-clip: padding-box;
+    border-radius: .25rem;
+}
+.dropdown-item
+{
+    color: var(--main-ar-color);
+    transition: all 0.2s ease-in-out;
+}
+.dropdown-item:hover
+{
+    color: var(--main-en-color);
+    background-color: transparent;
+}
+.activeLink
+{
+    color: var(--main-en-color);
+    cursor: default;
+}
+                                                           /* Header section */
+#header
+{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.headerContent
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: var(--main-en-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50rem;
+}
+.headerContent h1
+{
+    font-family: var(--main-en-font);
+    font-weight: 400;
+    font-size: 4rem;
+    margin-top: 1.5rem;
+}
+.headerContent img
+{
+    filter: brightness(50%);
+    width: 8rem;
+    height: 8rem;
+}
+.mainBg
+{
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/mainImg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: grayscale(100%) brightness(25%);
+    z-index: -1;
+    position: absolute;
+}
+.dropdown-menu .mainBg
+{
+    background-position: 300px 0;
+} 
+
+                                                                /* Guid section */
+
+
+a.article
+{
+    display: inline-block;
+    width: 100%;
+    height: 35rem;
+    padding: 0;
+    color: var(--main-ar-color);
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: var(--main-ar-font);
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+.article:hover
+{
+    transform: translateY(-15px);
+    box-shadow: 0px 15px 15px 0px rgba(0,0,0,0.75) !important;
+    color: var(--main-ar-color);
+}
+.article:hover img
+{
+    filter: grayscale(0%);
+}
+.article img
+{
+    width: 100%;
+    height: 85%;
+    filter: grayscale(100%);
+}
+.underImg
+{
+    position: relative;
+    width: 100%;
+    height: 15%;
+}
+.underImg span
+{
+    opacity: 1;
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    font-size: 2.45rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 0.3s ease-in-out;
+}
+.underImg i
+{
+    opacity: 0;
+    position: absolute;
+    font-size: 4rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 0.3s ease-in-out;
+}
+                                                                 /* Old, New, Random section */
+.section
+{
+    margin-top: 100px;
+}
+#old,#new,#random
+{
+    
+    color: var(--main-ar-color);
+    font-family: var(--main-ar-font);
+    text-align: center;
+}
+#old::before, #new::before, #random::before
+{ 
+    content: " ";
+    margin-top: 8%;
+}
+.titleSection
+{
+    text-align: center;
+    position: relative;
+}
+.titleSection div
+{
+    border-radius: 20px 20px 0 0;
+}
+.titleSection > span
+{
+    text-align: center;
+    display: inline-block;
+    font-size: 2.5rem;
+    padding: 0 15px 0 15px;
+}
+.moreSection a > span
+{
+    color: var(--main-ar-color);
+    text-align: center;
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: 0 15px 0 15px;
+    transition: all 0.2s ease-in-out;
+}
+.moreSection
+{
+    text-align: center;
+    position: relative;
+}
+.moreSection div
+{
+    border-radius: 0px 0px 20px 20px;
+}
+.moreSection a > span:hover
+{
+    color: var(--main-en-color);
+}
+.carousel-inner
+{
+    height: 40rem;
+    width: 60rem;
+}
+.carousel-inner img
+{
+    height: 40rem;
+    width: 60rem;
+}
+                                                         /* Footer section */
+#footer
+{
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    color: var(--main-ar-color);
+    font-family: var(--main-ar-font);
+}
+#footer img
+{
+    width: 7rem;
+    height: 7rem;
+}
+.flexContent
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+#footer form input,#footer form textarea
+{
+    width: 20rem;
+    margin-top: 2rem;
+    background-color: transparent;
+    border-color: var(--main-ar-color);
+    transition: all 0.3s ease-in-out;
+    color: var(--main-ar-color);
+    border-width: 2px;
+}
+#footer form input:focus,#footer form textarea:focus
+{
+    border-color: var(--main-en-color);
+
+}
+.contact form input[type="submit"]
+{
+    width: 10rem !important;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+.subscribe form input[type="submit"]
+{
+    width: 5rem !important;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+.subscribe form input[type="submit"]:hover,.contact form input[type="submit"]:hover
+{
+    color: var(--main-ar-color) !important;
+    background-color: var(--main-en-color) !important;
+    border-color: var(--main-en-color) !important;
+    border-width: 2px;
+}
+.location p:nth-child(2),.contact p:nth-child(2),.message p:nth-child(2),.follow p:nth-child(2),.subscribe p:nth-child(2)
+{
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+.location p:nth-child(3),.message p:nth-child(3)
+{
+    width: 20rem;
+    text-align: justify;
+}
+.contact,.location,.message,.follow,.subscribe
+{
+    margin-top: 2rem;
+}
+.socialMedia
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 10rem;
+    font-size: 1.5rem;
+}
+.socialMedia a i
+{
+    color: var(--main-ar-color);
+    transition: all 0.2s ease-in-out;
+}
+.socialMedia a i:hover
+{
+    color: var(--main-en-color);
+}
+.subscribe form
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.subscribe form input[type="email"]
+{
+    width: 15rem !important;
+    margin-left: 1rem;
+}
+.btn-outline-danger
+{
+    color: var(--main-en-color) !important;
+    border-color: var(--main-en-color) !important;
+    border-width: 2px;
+}
+.form-control:focus
+{
+    outline:0px !important;
+    box-shadow: none !important;
+}
+.mine
+{
+    color: var(--main-ar-color);
+}
+.mine img
+{
+    width: 3rem !important;
+    height: 3rem !important;
+}
+
+                                                            /* Register page */
+#mainHolder
+{
+    position: relative;
+    color: var(--main-ar-color);
+    box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.75);
+    text-align: center;
+}
+#mainHolder p
+{
+    font-size: 2rem;
+    color: var(--main-en-color);
+}
+#backHome
+{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+#backHome a
+{
+    font-size: 1rem;
+    color: var(--main-ar-color);
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+#backHome a:hover
+{
+    color: var(--main-en-color);
+}
+#subHolderLeft
+{
+    padding: 2rem 0;
+}
+#subHolderRight
+{
+    padding: 2rem 0;
+}
+#subHolderLeft form input, #subHolderRight form input, #subHolderLeft form button, #subHolderRight form .submit
+{
+    width: 20rem;
+    margin-top: 2rem;
+    background-color: transparent;
+    border-color: var(--main-ar-color);
+    transition: all 0.3s ease-in-out;
+    color: var(--main-en-color);
+    border-width: 2px;
+}
+#subHolderLeft form input:focus, #subHolderRight form input:focus
+{
+    border-color: var(--main-en-color);
+}
+#subHolderLeft form .submit, #subHolderRight form .submit
+{
+    width: 10rem !important;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+
+}
+#subHolderLeft form .submit:hover,#subHolderRight form .submit:hover
+{
+    color: var(--main-ar-color) !important;
+    background-color: var(--main-en-color) !important;
+    border-color: var(--main-en-color) !important;
+    border-width: 2px;
+}
+.holdCheckBox
+{
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+ height: 2rem;
+ margin-top: 1.5rem;
+}
+.holdCheckBox label
+{
+    margin: 0 !important;
+    color: black;
+}
+.holdCheckBox input
+{
+  margin: 0 0 0 1rem !important;
+}
+.coverHalf
+{
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    width: 50%;
+    height: 100;
+    color: var(--main-ar-color);
+    height: 100%;
+    transition: all 1s ease-in-out;
+}
+.coverHalf img
+{
+    width: 13rem;
+    height: 13rem;
+    margin-top: 8rem;
+}
+.coverHalf span
+{
+    margin-top: 1rem;
+    font-size: 2rem;
+    transition: all 0.2s ease-in-out;    
+}
+#coverState:hover
+{
+    color: var(--main-en-color);
+    cursor: pointer;
+}
+.close
+{
+    width: auto !important;
+    margin: 0 !important ;
+    color: #000000 ;
+    padding: 0 !important;
+    position: absolute !important;
+    top: 0;
+    right: 0;
+}
+.close:hover
+{
+    color: #000000 ;
+    background-color: #f4f4f4;
+}
+#errorMsg
+{
+    font-weight: bold;
+}
+#successMsg
+{
+    font-weight: bold;
+}
+                                                                /* Shop page */
+.title
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 20rem;
+    color: var(--main-en-color);     
+    z-index: -1;                                           
+}
+.title h1
+{
+    font-family: var(--main-en-font);
+    font-weight: 400;
+    font-size: 3rem;
+    margin-top: 1.5rem;
+}
+.title img
+{
+    filter: brightness(50%);
+    width: 6rem;
+    height: 6rem;    
+}
+.mixBar
+{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+.mixBar div button
+{
+    color: var(--main-ar-color);
+    font-size: 1rem;
+    font-weight: bold;
+}
+.btn.focus, .btn:focus
+{
+    box-shadow: none;
+}
+.mixBar div button:hover
+{
+    color: var(--main-en-color);
+}
+.holder
+{
+    position: relative;
+    height: 30rem;
+    width: 100%;
+}
+.holder img
+{
+    width: 100%;
+    height: 85%;
+}
+.subHolder
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+}
+.subHolder p
+{
+    font-size: 2rem;
+    margin: 0.3rem 0 0 0;
+}
+.subHolder span
+{
+    margin-bottom: 0.3rem;
+    display: inline-block;
+}
+.subHolder div span:nth-child(1)
+{
+    font-size: 1rem;
+}
+.subHolder div span:nth-child(2)
+{
+    font-size: 0.7rem;
+}
+.mix a
+{
+    color: var(--main-ar-color);
+    text-decoration: none;
+    height: 30rem;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    display: inline-block;
+}
+.mix a:hover
+{
+    transform: translateY(-15px) !important;
+    box-shadow: 0px 15px 15px 0px rgba(0,0,0,0.75) !important;
+}
+
+                                                            /* Detail and Cart page */
+.leftDetail img
+{
+    width: 75%;
+    height: 30rem;
+}
+.rightDetail p
+{
+    width: 30rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.rightDetail .submit, button.totalSum
+{
+    width: 7rem !important;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+button.totalSum
+{
+    width: 10rem !important;
+}
+.rightDetail .submit:hover, button.totalSum:hover
+{
+    color: var(--main-ar-color) !important;
+    background-color: var(--main-en-color) !important;
+    border-color: var(--main-en-color) !important;
+    border-width: 2px;
+}
+.rightDetail span
+{
+    display: inline-block;
+    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
+    color: #dc3545;
+    font-size: 1rem;
+}
+
+                                                            /* FinalStage page */
+.FinalContent i
+{
+    font-size: 6rem;
+}
+.FinalContent p
+{
+    font-size: 1.5rem;
+}
+.FinalSubContent span
+{
+    font-size: 1.5rem;
+}
+.FinalContent img
+{
+    width: 30rem;
+    height: 15rem;
+}
+
+                                                            /* Post and Worker page */
+                                        /* Notice: holderFormAdd is a group of (FormAddWorker , FormEditWorker , FormAddComment) */
+.formAdd form .row1, .formAdd form .row2, .formEdit form .row1, .holderFormAdd form.row1
+{
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.formAdd form input, .formAdd form textarea, .formEdit form input, .formEdit form textarea, .holderFormAdd form input
+{
+    width: 20rem;
+    margin-top: 2rem;
+    background-color: transparent;
+    border-color: var(--main-ar-color);
+    transition: all 0.3s ease-in-out;
+    color: var(--main-en-color);
+    border-width: 2px;
+}
+.holderFormAdd form input
+{
+    margin-top: 0;
+}
+.formAdd form input:focus, .formAdd form textarea:focus, .formEdit form input:focus, .formEdit form textarea:focus, .holderFormAdd form input:focus
+{
+    border-color: var(--main-en-color);
+    color: var(--main-en-color);
+}
+.formAdd form button, .formEdit form button, .holderFormAdd form button
+{
+    width: 10rem !important;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    padding: 0;
+}
+.addCommentBtn, .addWorkerBtn, .addPost
+{
+    width: 8rem !important;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    padding: 0;
+    display: block;
+    margin-left: auto;
+}
+.addCommentBtn:hover, .addWorkerBtn:hover, .addPost:hover
+{
+    color: var(--main-ar-color) !important;
+    background-color: var(--main-en-color) !important;
+    border-color: var(--main-en-color) !important;
+    border-width: 2px;
+}
+.formAdd form button:hover, .formEdit form button:hover, .holderFormAdd form button:hover
+{
+    color: var(--main-ar-color) !important;
+    background-color: var(--main-en-color) !important;
+    border-color: var(--main-en-color) !important;
+    border-width: 2px;
+}
+.radioHolder
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.formAdd form input[type="radio"]
+{
+    width: auto;
+    margin-top: 5px;
+}
+.formAdd form input[type="file"]
+{
+    margin: 0;
+    color: black;
+}
+.formAdd form label
+{
+    margin-right: 35px;
+}
+.form-check
+{
+    padding: 0;
+}
+.hasP p
+{
+    text-align: right;
+    margin: 0;
+    width: auto;
+    padding-bottom: 10px;
+    font-family: var(--main-ar-font);
+    font-weight: 500;
+}
+.addPost, .addWorker
+{
+    width: 10rem;
+    margin-left: auto !important;
+    display: block;
+}
+.addPost:hover, .addWorker:hover
+{
+    color: var(--main-ar-color) !important;
+    background-color: var(--main-en-color) !important;
+    border-color: var(--main-en-color) !important;
+    border-width: 2px;
+}
+.formAdd, .holderFormAdd
+{
+    transition: all 0.5s ease-in-out;
+}
+.toggleOpacity
+{
+
+}
+.showTable
+{
+    transition: all 0.5s ease-in-out;
+}
+.formEdit, .editWorkerForm
+{
+    transition: all 0.5s ease-in-out;
+}
+.delPost, .delWorker
+{
+    width: 6rem !important;
+    transition: all 0.2s ease-in-out;
+    padding: 0;
+    cursor: pointer;
+}
+.delPost:nth-child(1), .delWorker:nth-child(1)
+{
+    width: 4rem !important;
+    transition: all 0.2s ease-in-out;
+    padding: 0;
+}
+.delPost a, .delWorker a
+{
+    color: var(--main-en-color);
+    transition: all 0.2s ease-in-out;
+}
+.delPost:hover, .delWorker:hover
+{
+    color: var(--main-ar-color) !important;
+    background-color: var(--main-en-color) !important;
+    border-color: var(--main-en-color) !important;
+    border-width: 2px;
+}
+.delPost:hover a, .delWorker:hover a
+{
+    color: var(--main-ar-color) !important;
+}
+                                                            /* Comment page */
+button.readAll
+{
+    width: 8rem !important;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    padding: 0;
+    display: block;
+    margin-left: auto;
+}
+button.readAll:hover
+{
+    color: var(--main-ar-color) !important;
+    background-color: var(--main-en-color) !important;
+    border-color: var(--main-en-color) !important;
+    border-width: 2px;
+}
+
+
+                                                           /*     --- Media query ---     */
+                                                           /* xs */
+@media (max-width: 575.98px) {
+    nav span
+    {
+        font-size: 1rem;
+    }
+    .dropdown-menu
+    {
+        left: 80% !important;
+    }
+    .dropdown-menu a
+    {
+        font-size: 0.85rem !important;
+    }
+    .headerContent
+    {
+        width: 15rem;
+    }
+    .headerContent h1
+    {
+        font-size: 2rem;
+    }
+    .headerContent img
+    {
+        width: 5rem;
+        height: 5rem;
+    }
+    .article
+    {
+        height: 15rem;
+        font-size: 1rem;
+    }
+    .underImg span
+    {
+        font-size: 2rem;
+    }
+    .underImg i
+    {
+        font-size: 2.5rem;
+    }
+    .carousel-inner
+    {
+        height: 20rem;
+        width: 100%;
+    }
+    .carousel-inner img
+    {
+        height: 20rem;
+        width: 100%;
+    }
+    .titleSection > span
+    {
+        font-size: 1.5rem;
+        padding: 0 8px 0 8px;
+    }
+    .moreSection a > span
+    {
+        font-size: 0.8rem;
+        padding: 0 8px 0 8px;
+    }
+    #footer img
+    {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    #footer form input,#footer form textarea
+    {
+        width: 7rem;
+        margin-top: 1rem;
+    }
+    .contact form input[type="submit"]
+    {
+        width: 4rem !important;
+        font-size: 0.8rem;
+    }
+    .subscribe form input[type="submit"]
+    {
+        width: 2.2rem !important;
+        font-size: 0.5rem;
+        padding: 0;
+    }
+    .location p:nth-child(2),.contact p:nth-child(2),.message p:nth-child(2),.follow p:nth-child(2),.subscribe p:nth-child(2)
+    {
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+    .location p:nth-child(3),.message p:nth-child(3)
+    {
+        width: 7rem;
+        font-size: 0.7rem;
+        
+    }
+    .contact,.location,.message,.follow,.subscribe
+    {
+        margin-top: 2rem;
+    }
+    .socialMedia
+    {
+        width: 5rem;
+        font-size: 0.8rem;
+    }
+    .subscribe form input[type="email"]
+    {
+        width: 5rem !important;
+        margin-left: 0.3rem;
+    }
+    ::-webkit-input-placeholder
+    {
+        font-size: 0.7rem !important;
+    }
+    .mine span
+    {
+        font-size: 0.6rem;
+    }
+    .mine img
+    {
+        width: 1.7rem !important;
+        height: 1.7rem !important;
+    }
+    #mainHolder p
+    {
+        font-size: 1.2rem;
+    }
+    #subHolderLeft form input, #subHolderRight form input, #subHolderLeft form button, #subHolderRight form button
+    {
+        width: 10rem;
+        margin-top: 1rem;
+    }
+    #subHolderLeft form button, #subHolderRight form button
+    {
+        max-width: 3rem !important;
+        font-size: 0.8rem !important;
+        padding: 0;
+    }
+    .holdCheckBox
+    {
+    height: 1.2rem;
+    margin-top: 0.8rem;
+    font-size: 0.7rem;
+    }
+    .coverHalf img
+    {
+        width: 7rem;
+        height: 7rem;
+        margin-top: 7rem;
+    }
+    .coverHalf span
+    {
+        margin-top: 1rem;
+        font-size: 1.5rem;   
+    }
+    #backHome a
+    {
+        font-size: 0.7rem;
+    }
+    .mixBar div button
+    {
+        font-size: 0.6rem;
+    }
+    .holder
+    {
+        height: 20rem;
+    }
+    .subHolder p
+    {
+        font-size: 1.2rem;
+        margin: 0.1rem 0 0 0;
+    }
+    .subHolder span
+    {
+        margin-bottom: 0.3rem;
+    }
+    .subHolder div span:nth-child(1)
+    {
+        font-size: 0.7rem;
+    }
+    .subHolder div span:nth-child(2)
+    {
+        font-size: 0.4rem;
+    }
+    .mix a
+    {
+         height: 20rem;
+    }
+    .title
+    {
+        height: 10rem;                                              
+    }
+    .title h1
+    {
+        font-weight: 400;
+        font-size: 2rem;
+        margin-top: 1.5rem;
+    }
+    .title img
+    {
+        width: 4rem;
+        height: 4rem;    
+    }
+    .leftDetail img
+    {
+        width: 70%;
+        height: 20rem;
+    }
+    .rightDetail p
+    {
+        width: 20rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .rightDetail .submit
+    {
+        width: 5.8rem !important;
+        font-size: 0.75rem;
+    }
+    .rightDetail span
+    {
+        margin-top: 1rem;
+        font-size: 0.7rem;
+    }
+    .FinalContent i
+    {
+        font-size: 4.5rem;
+    }
+    .FinalContent p
+    {
+        font-size: 1rem;
+    }
+    .FinalSubContent span
+    {
+        font-size: 1rem;
+    }
+    .FinalContent img
+    {
+        width: 20rem;
+        height: 9rem;
+    }
+    .formEdit form button, .formAdd form button
+    {
+        width: 9rem !important;
+        font-size: 1rem;
+    }
+}
+                                                           /* sm */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    nav span
+    {
+        font-size: 1.1rem;
+    }
+    .dropdown-menu
+    {
+        left: 70% !important;
+    }
+    .dropdown-menu a
+    {
+        font-size: 0.9rem !important;
+    }
+    .headerContent
+    {
+        width: 25rem;
+    }
+    .headerContent h1
+    {
+        font-size: 2.7rem;
+    }
+    .headerContent img
+    {
+        width: 5.7rem;
+        height: 5.7rem;
+    }
+    .article
+    {
+        height: 20rem;
+        font-size: 1.2rem;
+    }
+    .underImg i
+    {
+        font-size: 2.3rem;
+    }
+    .carousel-inner
+    {
+        height: 23rem;
+        width: 100%;
+    }
+    .carousel-inner img
+    {
+        height: 23rem;
+        width: 100%;
+    }
+    .titleSection > span
+    {
+        font-size: 1.8rem;
+        padding: 0 10px 0 10px;
+    }
+    .moreSection a > span
+    {
+        font-size: 1.3rem;
+        padding: 0 10px 0 10px;
+    }
+    #footer img
+    {
+        width: 3.8rem;
+        height: 3.8rem;
+    }
+    #footer form input,#footer form textarea
+    {
+        width: 11rem;
+        margin-top: 1.2rem;
+    }
+    .contact form input[type="submit"]
+    {
+        width: 5rem !important;
+        font-size: 1rem;
+    }
+    .subscribe form input[type="submit"]
+    {
+        width: 2.5rem !important;
+        font-size: 0.6rem;
+        padding: 0;
+    }
+    .location p:nth-child(2),.contact p:nth-child(2),.message p:nth-child(2),.follow p:nth-child(2),.subscribe p:nth-child(2)
+    {
+        margin-top: 1.2rem;
+        font-size: 1.2rem;
+    }
+    .location p:nth-child(3),.message p:nth-child(3)
+    {
+        width: 10rem;
+        font-size: 0.75rem;
+        
+    }
+    .contact,.location,.message,.follow,.subscribe
+    {
+        margin-top: 2rem;
+    }
+    .socialMedia
+    {
+        width: 6rem;
+        font-size: 1rem;
+    }
+    .subscribe form input[type="email"]
+    {
+        width: 8.5rem !important;
+        margin-left: 0.5rem;
+    }
+    ::-webkit-input-placeholder
+    {
+        font-size: 0.8rem !important;
+    }
+    .mine span
+    {
+        font-size: 0.7rem;
+    }
+    .mine img
+    {
+        width: 2rem !important;
+        height: 2rem !important;
+    }
+    #mainHolder p
+    {
+        font-size: 1.5rem;
+    }
+    #subHolderLeft form input, #subHolderRight form input, #subHolderLeft form button, #subHolderRight form button
+    {
+        width: 13rem;
+        margin-top: 1.3rem;
+    }
+    #subHolderLeft form button, #subHolderRight form button
+    {
+        max-width: 5rem !important;
+        font-size: 1rem !important;
+    }
+    .holdCheckBox
+    {
+    height: 1.5rem;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    }
+    .coverHalf img
+    {
+        width: 8rem;
+        height: 8rem;
+        margin-top: 7rem;
+    }
+    .coverHalf span
+    {
+        margin-top: 1rem;
+        font-size: 1.8rem;   
+    }
+    #backHome a
+    {
+        font-size: 0.8rem;
+    }
+    .mixBar div button
+    {
+        font-size: 0.7rem;
+    }
+    .holder
+    {
+        height: 22rem;
+    }
+    .subHolder p
+    {
+        font-size: 1.4rem;
+        margin: 0.1rem 0 0 0;
+    }
+    .subHolder span
+    {
+        margin-bottom: 0.3rem;
+    }
+    .subHolder div span:nth-child(1)
+    {
+        font-size: 0.75rem;
+    }
+    .subHolder div span:nth-child(2)
+    {
+        font-size: 0.45rem;
+    }
+    .mix a
+    {
+         height: 22rem;
+    }
+    .title
+    {
+        height: 13rem;                                              
+    }
+    .title h1
+    {
+        font-weight: 400;
+        font-size: 2.2rem;
+        margin-top: 1.5rem;
+    }
+    .title img
+    {
+        width: 4.5rem;
+        height: 4.5rem;    
+    }
+    .leftDetail img
+    {
+        width: 65%;
+        height: 20rem;
+    }
+    .rightDetail p
+    {
+        width: 27rem;
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+    .rightDetail .submit
+    {
+        width: 6rem !important;
+        font-size: 0.8rem;
+    }
+    .rightDetail span
+    {
+        margin-top: 1rem;
+        font-size: 0.75rem;
+    }
+    .FinalContent i
+    {
+        font-size: 5rem;
+    }
+    .FinalContent p
+    {
+        font-size: 1.1rem;
+    }
+    .FinalSubContent span
+    {
+        font-size: 1.1rem;
+    }
+    .FinalContent img
+    {
+        width: 25rem;
+        height: 11rem;
+    }
+    .formEdit form button, .formAdd form button
+    {
+        width: 10rem !important;
+        font-size: 1rem;
+    }
+}
+                                                                        /* md */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    nav span
+    {
+        font-size: 1.2rem;
+    }
+    .dropdown-menu
+    {
+        left: 60% !important;
+    }
+    .dropdown-menu a
+    {
+        font-size: 0.95rem !important;
+    }
+    .headerContent
+    {
+        width: 25rem;
+    }
+    .headerContent h1
+    {
+        font-size: 3.5rem;
+    }
+    .headerContent img
+    {
+        width: 7rem;
+        height: 7rem;
+    }
+    .article
+    {
+        height: 27rem;
+        font-size: 1.7rem;
+    }
+    .underImg i
+    {
+        font-size: 3rem;
+    }
+    .carousel-inner
+    {
+        height: 25rem;
+        width: 45rem;
+    }
+    .carousel-inner img
+    {
+        height: 25rem;
+        width: 45rem;
+    }
+    .titleSection > span
+    {
+        font-size: 2rem;
+        padding: 0 10px 0 10px;
+    }
+    .moreSection a > span
+    {
+        font-size: 1rem;
+        padding: 0 10px 0 10px;
+    }
+    #footer img
+    {
+        width: 5rem;
+        height: 5rem;
+    }
+    #footer form input,#footer form textarea
+    {
+        width: 13rem;
+        margin-top: 1.5rem;
+    }
+    .contact form input[type="submit"]
+    {
+        width: 6rem !important;
+        font-size: 1.1rem;
+    }
+    .subscribe form input[type="submit"]
+    {
+        width: 3rem !important;
+        font-size: 0.8rem;
+    }
+    .location p:nth-child(2),.contact p:nth-child(2),.message p:nth-child(2),.follow p:nth-child(2),.subscribe p:nth-child(2)
+    {
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+    }
+    .location p:nth-child(3),.message p:nth-child(3)
+    {
+        width: 15rem;
+        font-size: 0.8rem;
+    }
+    .contact,.location,.message,.follow,.subscribe
+    {
+        margin-top: 2rem;
+    }
+    .socialMedia
+    {
+        width: 8rem;
+        font-size: 1.2rem;
+    }
+    .subscribe form input[type="email"]
+    {
+        width: 11rem !important;
+        margin-left: 1rem;
+    }
+    ::-webkit-input-placeholder
+    {
+        font-size: 0.9rem ;
+    }
+    .mine span
+    {
+        font-size: 0.8rem;
+    }
+    .mine img
+    {
+        width: 2.2rem !important;
+        height: 2.2rem !important;
+    }
+    #mainHolder p
+    {
+        font-size: 1.7rem;
+    }
+    #subHolderLeft form input, #subHolderRight form input, #subHolderLeft form button, #subHolderRight form button
+    {
+        width: 17rem;
+        margin-top: 1.7rem;
+    }
+    #subHolderLeft form button, #subHolderRight form button
+    {
+        max-width: 7rem !important;
+        font-size: 1.2rem !important;
+    }
+    .holdCheckBox
+    {
+        height: 1.7rem;
+        margin-top: 1.2rem;
+        font-size: 0.9rem;
+    }
+    .coverHalf img
+    {
+        width: 10rem;
+        height: 10rem;
+        margin-top: 7rem;
+    }
+    .coverHalf span
+    {
+        margin-top: 1rem;
+        font-size: 1.8rem;   
+    }
+    #backHome a
+    {
+        font-size: 0.9rem;
+    }
+    .mixBar div button
+    {
+        font-size: 0.8rem;
+    }
+    .holder
+    {
+        height: 25rem;
+    }
+    .subHolder p
+    {
+        font-size: 1.6rem;
+        margin: 0.1rem 0 0 0;
+    }
+    .subHolder span
+    {
+        margin-bottom: 0.3rem;
+    }
+    .subHolder div span:nth-child(1)
+    {
+        font-size: 0.8rem;
+    }
+    .subHolder div span:nth-child(2)
+    {
+        font-size: 0.5rem;
+    }
+    .mix a
+    {
+         height: 25rem;
+    }
+    .title
+    {
+        height: 15rem;                                              
+    }
+    .title h1
+    {
+        font-weight: 400;
+        font-size: 2.5rem;
+        margin-top: 1.5rem;
+    }
+    .title img
+    {
+        width: 5rem;
+        height: 5rem;    
+    }
+    .leftDetail img
+    {
+        width: 75%;
+        height: 22rem;
+    }
+    .rightDetail p
+    {
+        width: 20rem;
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+    }
+    .rightDetail .submit
+    {
+        width: 6.5rem !important;
+        font-size: 0.9rem;
+    }
+    .rightDetail span
+    {
+        margin-top: 1rem;
+        font-size: 0.8rem;
+    }
+    .FinalContent i
+    {
+        font-size: 5.5rem;
+    }
+    .FinalContent p
+    {
+        font-size: 1.3rem;
+    }
+    .FinalSubContent span
+    {
+        font-size: 1.3rem;
+    }
+    .FinalContent img
+    {
+        width: 27rem;
+        height: 13rem;
+    }
+    .formEdit form button, .formAdd form button
+    {
+        width: 9rem !important;
+        font-size: 1.3rem;
+    }
+}
+                                                                        /* lg */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .headerContent h1
+    {
+        font-size: 3.5rem;
+    }
+    .headerContent img
+    {
+        width: 7rem;
+        height: 7rem;
+    }
+    .article
+    {
+        height: 30rem;
+        font-size: 2rem;
+    }
+    .underImg i
+    {
+        font-size: 3.5rem;
+    }
+    .carousel-inner
+    {
+        height: 35rem;
+        width: 55rem;
+    }
+    .carousel-inner img
+    {
+        height: 35rem;
+        width: 55rem;
+    }
+    .titleSection > span
+    {
+        font-size: 2.2rem;
+        padding: 0 12px 0 12px;
+    }
+    .moreSection a > span
+    {
+        font-size: 1.2rem;
+        padding: 0 12px 0 12px;
+    }
+    #footer img
+    {
+        width: 6rem;
+        height: 6rem;
+    }
+    #footer form input,#footer form textarea
+    {
+        width: 15rem;
+        margin-top: 1.5rem;
+    }
+    .contact form input[type="submit"]
+    {
+        width: 7rem !important;
+        font-size: 1.2rem;
+    }
+    .subscribe form input[type="submit"]
+    {
+        width: 3rem !important;
+        font-size: 0.8rem;
+    }
+    .location p:nth-child(2),.contact p:nth-child(2),.message p:nth-child(2),.follow p:nth-child(2),.subscribe p:nth-child(2)
+    {
+        margin-top: 1.7rem;
+        font-size: 1.7rem;
+    }
+    .location p:nth-child(3),.message p:nth-child(3)
+    {
+        width: 17rem;
+        font-size: 0.9rem;
+    }
+    .contact,.location,.message,.follow,.subscribe
+    {
+        margin-top: 2rem;
+    }
+    .socialMedia
+    {
+        width: 9rem;
+        font-size: 1.3rem;
+    }
+    .subscribe form input[type="email"]
+    {
+        width: 13rem !important;
+        margin-left: 1rem;
+    }
+    .mine span
+    {
+        font-size: 0.9rem;
+    }
+    .mine img
+    {
+        width: 2.5rem !important;
+        height: 2.5rem !important;
+    }
+    .mixBar div button
+    {
+        font-size: 0.9rem;
+    }
+    .holder
+    {
+        height: 28rem;
+    }
+    .subHolder p
+    {
+        font-size: 1.8rem;
+        margin: 0.2rem 0 0 0;
+    }
+    .subHolder span
+    {
+        margin-bottom: 0.3rem;
+    }
+    .subHolder div span:nth-child(1)
+    {
+        font-size: 0.9rem;
+    }
+    .subHolder div span:nth-child(2)
+    {
+        font-size: 0.6rem;
+    }
+    .mix a
+    {
+         height: 28rem;
+    }
+    .title
+    {
+        height: 18rem;                                              
+    }
+    .title h1
+    {
+        font-weight: 400;
+        font-size: 2.7rem;
+        margin-top: 1.5rem;
+    }
+    .title img
+    {
+        width: 5.5rem;
+        height: 5.5rem;    
+    }
+    .leftDetail img
+    {
+        width: 75%;
+        height: 25rem;
+    }
+    .rightDetail p
+    {
+        width: 25rem;
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+    .rightDetail .submit
+    {
+        width: 7rem !important;
+        font-size: 1rem;
+    }
+    .rightDetail span
+    {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+                                                          /* xl */
+@media (min-width: 1200px) {
+ 
+}

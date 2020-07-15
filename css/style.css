@@ -1,0 +1,2360 @@
+*,*::after,*::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root
+{
+    --red: #fa5252;
+    --white: #ffffff;
+    --light-blue: #455871;
+    --dark-blue: #3e4e62;
+}
+html
+{
+    scroll-behavior: smooth;
+    overflow-x: hidden !important;
+}
+body
+{
+    font-family: 'Amiri', serif !important;
+    overflow-x: hidden !important;
+}
+.section
+{
+    margin-top: 200px;
+}
+.section2
+{
+    margin-top: 200px;
+}
+.section3
+{
+    margin-top: 450px;
+}
+.section5
+{
+    margin-top: 300px;
+}
+                                                            /* Navbar */
+.nav__list
+{
+    margin-top: 15vh;
+}
+.nav__link
+{
+    width: 100px !important;
+    height: 25%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -999;
+}
+.activeLink
+{
+    pointer-events: none;
+}
+.nav
+{
+    width: 100px !important;
+    height: 100vh !important;
+    z-index: 999999 !important;
+}
+.nav ul
+{
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    height: 85vh;
+}
+div.burger
+{
+    width: 10vw !important;
+    height: 15vh !important;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px)
+{
+    .nav__list
+    {
+        margin-top: 10vh;
+    }
+    .nav__link
+    {
+        width: 70px !important;
+    }
+    .nav
+    {
+        width: 70px !important;
+    }
+    .nav ul
+    {
+        height: 90vh;
+    }
+    div.burger
+    {
+        width: 70px !important;
+        height: 10vh !important;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px)
+{
+    .nav__list
+{
+    margin-top: 15vh;
+}
+.nav__link
+{
+    width: 15vw !important;
+}
+.nav
+{
+    width: 15vw !important;
+    height: 100vh !important;
+}
+.nav ul
+{
+    height: 85vh;
+}
+div.burger
+{
+    width: 15vw !important;
+    height: 15vh !important;
+}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px)
+{
+    div.burger
+    {
+        width: 15vw !important;
+        height: 15vh !important;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px)
+{
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px)
+{
+
+}
+
+                                                            /* Header */
+#header
+{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+.headerImg
+{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/testBG.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: grayscale(100%) brightness(50%);
+}
+.headerCover
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #3E4E62;
+    opacity: 0.9;
+}
+#header h1
+{
+    color: var(--red);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0.9;
+    font-size: 7rem;
+}
+#header h1::after
+{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%,-50%);
+    z-index: -1;
+    height: 250px;
+    width: 350px;
+    background-color: var(--light-blue);
+    opacity: 0.8;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+}
+#header p a
+{
+    color: var(--white);
+    position: absolute;
+    top: 63.5%;
+    left: 56%;
+    transform: translate(0%,-63.5%);
+    font-size: 2rem;
+    border: 3px solid var(--red);
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+}
+#header p a:hover
+{
+    background-color: var(--red);
+    text-decoration: none;
+}
+                                                            /* About */
+.aboutHolder
+{
+    position: relative;
+    text-align: right;
+    width: 75%;
+    padding: 50px;
+    margin: auto;
+}
+.aboutHolder::after
+{
+    content: "";
+    position: absolute;
+    top: -17%;
+    right: -5%;
+    transform: translate(0%,0%);
+    z-index: -10;
+    height: 350px;
+    width: 100px;
+    background-color: var(--light-blue);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+.aboutHolder p.title
+{
+    color: var(--white);
+    font-size: 3rem;
+    opacity: 0.9;
+}
+.aboutHolder p:last-child
+{
+    color: var(--white);
+    font-size: 1rem;
+}
+.aboutImg
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -5;
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/about.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+.aboutCover
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    background-color: #3E4E62;
+    opacity: 0.9;
+}
+
+                                                            /* Guid */
+#guid::before
+{
+    content: "";
+    height: 50px;
+    display: block;
+}
+.guidHolder
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.guidImg
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -5;
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/guid.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+.guidCover
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    background-color: #3E4E62;
+    opacity: 0.9;
+}
+.articleHolder
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    padding-top: 150px;
+}
+.article
+{
+    color: black;
+    background-color: white;
+    width: 27%;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    position: relative;
+}
+.article img
+{
+    width: 100%;
+    height: 250px;
+}
+.articleInner
+{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    margin-top: -25px;
+    z-index: 999;
+    background-color: var(--white);
+    color: var(--dark-blue);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    padding: 20px;
+}
+.articleInner p:first-child
+{
+    font-size: 2rem;
+    display: inline-block;
+}
+.articleInner p:first-child::after
+{
+    content: "";
+    display: block;
+    background-color: var(--dark-blue);
+    height: 2px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.articleInner p:nth-child(2)
+{
+    font-size: 1rem;
+}
+.articleInner button
+{
+    font-size: 1.2rem;
+    display: inline-block;
+    background-color: var(--red);
+    color: var(--white);
+    padding: 0px 20px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid var(--red);
+    margin-top: 15px;
+}
+.articleInner button:hover
+{
+    background-color: transparent;
+    color: var(--red);
+}
+
+                                                            /* Contact */
+#contact::before
+{
+    content: "";
+    display: block;
+    height: 100px;
+}
+.contactHolder
+{
+    position: relative;
+    text-align: right;
+    width: 75%;
+    padding: 50px;
+    margin: auto;
+}
+.contactHolder::after
+{
+    content: "";
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    transform: translate(0%,0%);
+    z-index: -10;
+    height: 700px;
+    width: 100px;
+    background-color: var(--light-blue);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+.contactHolder p.title
+{
+    color: var(--white);
+    font-size: 3rem;
+    opacity: 0.9;
+}
+.contactHolder p:last-child
+{
+    color: var(--white);
+    font-size: 1rem;
+}
+.contactImg
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -5;
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/contact.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+.contactCover
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    background-color: #3E4E62;
+    opacity: 0.9;
+}
+.contactHolder form
+{
+    text-align: center;
+    color: var(--white);
+    font-size: 1rem;
+}
+.contactHolder form input, .contactHolder form textarea
+{
+    opacity: 0.8;
+    transition: all 0.2s ease-in-out;
+}
+.contactHolder form input:focus, .contactHolder form textarea:focus
+{
+    opacity: 1;
+}
+.contactHolder form button
+{
+    font-size: 1.3rem;
+    display: inline-block;
+    background-color: var(--red);
+    color: var(--white);
+    padding: 0px 20px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid var(--red);
+    margin-top: 15px;
+    opacity: 1;
+    border-radius: 0;
+}
+.contactHolder form button:hover
+{
+    background-color: transparent;
+    color: var(--red);
+}
+                                                            /* Location */
+.locationHolder
+{
+    position: relative;
+    text-align: right;
+    width: 75%;
+    padding: 30px;
+    margin: auto;
+}
+.locationHolder::after
+{
+    content: "";
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    transform: translate(0%,0%);
+    z-index: -10;
+    height: 100px;
+    width: 400px;
+    background-color: var(--light-blue);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+.locationHolder p.title
+{
+    color: var(--white);
+    font-size: 3rem;
+    opacity: 0.9;
+}
+.locationHolder p:last-child
+{
+    color: var(--white);
+    font-size: 1rem;
+}
+.locationImg
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -5;
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/location.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+.locationCover
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    background-color: #3E4E62;
+    opacity: 0.9;
+}
+                                                            /* Footer */
+#footer
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.footerImg
+{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/testBG.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: grayscale(100%) brightness(50%);
+}
+.footerCover
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #3E4E62;
+    opacity: 0.9;
+}
+.footerHolder
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: var(--white);
+    font-size: 1rem !important;
+}
+.leftSide, .rightSide
+{
+    position: relative;
+    direction: rtl;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+}
+.leftSide p, .rightSide p
+{
+    font-size: 1rem;
+}
+.rightSide p a
+{
+    color: var(--white);
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+}
+.rightSide p a:hover
+{
+    color: var(--red);
+}
+.leftSide p.title, .rightSide p.title
+{
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+.rightSide p.title:nth-last-child(2)
+{
+    margin-top: 50px;
+}
+.toCover
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background-color: var(--light-blue);
+    opacity: 0.8;
+}
+.socialMedia
+{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    width: 75%;
+    font-size: 1.5rem;
+    margin: auto;
+}
+.socialMedia a
+{
+    color: white;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+}
+.socialMedia a:hover
+{
+    color: var(--red);
+}
+.mine
+{
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    display: block;
+    transform: translateX(-50%);
+    color: var(--white);
+    font-size: 1rem;
+    font-family: 'Lora', serif;
+}
+.mine p::before
+{
+    content: "";
+    display: block;
+    background-color: var(--white);
+    height: 2px;
+    margin-bottom: 7px;
+    width: 130%;
+    margin-left: -15%;
+}
+                                                            /* Shop */
+.smallSection
+{
+    margin-top: 100px;
+}
+.mixBarSection
+{
+   margin-bottom: 70px;
+}
+#headerTitle
+{
+    position: relative;
+    height: 25vh;
+    width: 100%;
+}
+#headerTitle h1
+{
+    color: var(--red);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0.9;
+    font-size: 6rem;
+}
+#headerTitle h1::after
+{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%,-50%);
+    z-index: -1;
+    height: 180px;
+    width: 280px;
+    background-color: var(--light-blue);
+    opacity: 0.8;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+}
+.mixBar
+{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+.mixBar div button
+{
+    color: var(--white);
+    font-size: 1rem;
+}
+.btn.focus, .btn:focus
+{
+    box-shadow: none;
+}
+.mixBar div button:hover
+{
+    color: var(--red);
+}
+.holder
+{
+    position: relative;
+    height: 30rem;
+    width: 100%;
+}
+.holder img
+{
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+}
+.subHolder
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    color: var(--white);
+    position: relative;
+}
+.subHolder p
+{
+    font-size: 1.8rem;
+    margin: 0.3rem 0 0 0;
+}
+.subHolder span
+{
+    margin-bottom: 0.3rem;
+    display: inline-block;
+}
+.subHolder div span:nth-child(2)
+{
+    font-size: 1rem;
+}
+.subHolder div span:nth-child(1)
+{
+    font-size: 0.7rem;
+}
+.mix a
+{
+    color: var(--main-ar-color);
+    text-decoration: none;
+    height: 30rem;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    display: inline-block;
+}
+.mix a:hover
+{
+    transform: translateY(-15px) !important;
+    box-shadow: 0px 15px 15px 0px rgba(0,0,0,0.75) !important;
+}
+.innerMixBG
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/testBG.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: grayscale(100%) brightness(50%);
+    z-index: -55;
+}
+.innerMix
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-blue);
+    z-index: -5;
+    opacity: 0.8;
+}
+                                                             /* Detail and Cart */
+.leftDetail img
+{
+    width: 75%;
+    height: 27rem;
+    object-fit: cover;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+.rightDetail
+{
+    position: relative;
+}
+.rightDetail p
+{
+    width: 30rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: var(--white);
+}
+.rightDetail .submit, button.totalSum
+{
+    width: 7rem !important;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+    color: var(--white);
+    background-color: var(--red);
+    border: 2px solid var(--red);
+}
+.rightDetail .submit:hover, button.totalSum:hover
+{
+    color: var(--red) !important;
+    background-color: transparent !important;
+}
+button.totalSum
+{
+    width: 10rem !important;
+}
+.rightDetail span
+{
+    display: inline-block;
+    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
+    color: #dc3545;
+    font-size: 1rem;
+}
+.noItems p
+{
+    font-size: 1.5rem;
+}
+                                                             /* Shop */
+
+.shopHolder
+{
+    position: relative;
+}
+.deleteCart
+{
+    color: var(--white);
+
+}
+.toBlackColor p
+{
+    color: black !important;
+}
+.shopImg
+{
+    position: absolute;
+    height: 100%;
+    width: 75%;
+    top: 0;
+    right: 0;
+    background-image: url('../img/testBG.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: grayscale(100%) brightness(50%);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+
+}
+.shopCover
+{
+    position: absolute;
+    width: 75%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: #3E4E62;
+    opacity: 0.9;
+}
+.bigPCart
+{
+    font-size: 3.7rem;
+    position: absolute;
+    top: 0%;
+    left: 75%;
+    transform: translateX(-75%);
+    color: var(--white);
+    margin-bottom: 0;
+}
+.shopHolder .row
+{
+    height: 650px;
+}
+.totalSum
+{
+    position: absolute;
+    bottom: 0;
+    left: 60%;
+    transform: translateX(-60%);
+}
+.deleteCart
+{
+    position: absolute;
+    top: -30%;
+    right: 5%;
+    transition: all 0.2s ease-in-out;
+}
+.deleteCart:hover
+{
+    background-color: var(--red);
+}
+.deleteCart img
+{
+    width: 40px;
+    height: 40px;
+}
+.modal-title
+{
+    color: var(--dark-blue);
+}
+.delPost, .delWorker
+{
+    width: 6rem !important;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    color: var(--red);
+    background-color: var(--white);
+    border: 2px solid var(--red);
+    padding: 0;
+}
+.delPost a, .delWorker a
+{
+    color: var(--red);
+    text-decoration: none;
+    display: block;
+    transition: all 0.2s ease-in-out;
+}
+.delPost:hover, .delWorker:hover
+{
+    color: var(--white) !important;
+    background-color: var(--red) !important;
+}
+.delPost:hover a, .delWorker:hover a
+{
+    color: var(--white) !important;
+}
+.modal
+{
+    z-index: 999999;
+}
+                                                            /* FinalStage */
+
+.FinalContent p
+{
+    font-size: 1.5rem;
+}
+.FinalSubContent span
+{
+    font-size: 1.5rem;
+}
+.paymentCards img
+{
+    width: 30%;
+    margin-top: 50px;
+}
+.finalHolder
+{
+    position: relative;
+    color: var(--white);
+    padding: 50px 100px;
+    width: 90%;
+    margin: auto;
+}
+.finalHolder::before
+{
+    content: "";
+    position: absolute;
+    top: -5%;
+    right: -5%;
+    transform: translate(0%,0%);
+    z-index: -10;
+    height: 400px;
+    width: 400px;
+    z-index: -9999;
+    background-color: var(--light-blue);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+.finalHolder::after
+{
+    content: "";
+    position: absolute;
+    bottom: -5%;
+    left: -5%;
+    transform: translate(0%,0%);
+    z-index: -10;
+    height: 400px;
+    width: 400px;
+    z-index: -9999;
+    background-color: var(--light-blue);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+.finalImgContent
+{
+    margin-bottom: 50px;
+}
+.finalImg
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: -99;
+    background-image: url('../img/testBG.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: grayscale(100%) brightness(50%);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+.finalCover
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -88;
+    background-color: #3E4E62;
+    opacity: 0.9;
+}
+                                                            /* Register */
+.registerHolder
+{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    padding: 50px;
+    z-index: 1;
+    margin: auto;
+    color: var(--white);
+}
+.registerContainer
+{
+    background-color: var(--light-blue);
+    padding: 20px;
+    width: 50%;
+}
+.registerImg
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: -99;
+    background-image: url('../img/testBG.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: grayscale(100%) brightness(50%);
+}
+.registerCover
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -88;
+    background-color: #3E4E62;
+    opacity: 0.9;
+}
+.pToggle
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--red);
+    font-size: 1.2rem;
+    background-color: var(--light-blue);
+    padding: 20px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    margin: 0;
+    z-index: 1;
+}
+.pToggle:hover
+{
+    color: var(--white);
+}
+.pTitle
+{
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 50px;
+    text-align: center;
+    display: inline-block;
+}
+.registerHolder form
+{
+    width: 50%;
+    margin: auto;
+    direction: rtl;
+    text-align: right;
+}
+.registerHolder form .paddingForFail
+{
+    margin-bottom: 30px;
+}
+.registerHolder form button
+{
+    display: block;
+    width: auto;
+    color: var(--white);
+    background-color: var(--red);
+    margin: auto !important;
+    border: 2px solid var(--red);
+    transition: all 0.2s ease-in-out;
+    opacity: 0.9;
+    border-radius: 0;
+    font-size: 1.3rem;
+    padding: 5px 20px;
+}
+.registerHolder form button:hover
+{
+    color: var(--red);
+    border-color: var(--red);
+    background-color: transparent;
+}
+.registerHolder form input, .registerHolder form textarea
+{
+    opacity: 0.8;
+    transition: all 0.2s ease-in-out;
+}
+.registerHolder form input:focus, .registerHolder form textarea:focus
+{
+    opacity: 1;
+}
+.holdCheckBox label
+{
+    margin-right: 5px;
+}
+.newAccount span, .hasAccount span
+{
+    color: var(--red);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+.newAccount span:hover, .hasAccount span:hover
+{
+    color: var(--white);
+}
+#login
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+#register
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+button.close
+{
+    background-color: transparent !important;
+    border: none !important;
+    outline: none !important;
+
+}
+                                                            /* Dashboard */
+#dashboard
+{
+    margin-top: 100px;
+}
+.subDash
+{
+    background-color: var(--light-blue);
+    margin-top: 50px;
+    padding: 25px;
+    color: var(--white);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.50);
+}
+a
+{
+    text-decoration: none !important;
+}
+.subDash i
+{
+    font-size: 3rem;
+    color: var(--red);
+    background-color: var(--white);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    line-height: auto;
+    padding: 25px;
+    transition: all 0.3s ease-in-out;
+}
+.nav__link i
+{
+    font-size: 2.5rem;
+    color: var(--white);
+}
+.subDash p:nth-child(2)
+{
+    font-size: 2rem !important;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.subDash:hover i
+{
+    color: var(--white);
+    background-color: var(--red);
+    box-shadow: 0px 0px 10px 0px;
+
+}
+.subDash:hover p:nth-child(2)
+{
+    color: var(--red);
+}
+.subDash:hover
+{
+    box-shadow: 0px 20px 10px 0px rgba(0,0,0,0.50);
+    transform: translateY(-20px);
+}
+                                                            /* Order */
+.fa-circle
+{
+    color: var(--red) !important;
+}
+.readAll
+{
+    color: var(--white);
+    border: 2px solid var(--dark-blue);
+    background-color: var(--dark-blue);
+    width: auto;
+    display: block;
+    margin-left: auto;
+}
+.readAll:hover
+{
+    color: var(--dark-blue);
+    background-color: transparent;
+    border: 2px solid var(--dark-blue);
+
+}
+                                                            /* Comment */
+.addCommentBtn
+{
+    color: var(--white);
+    border: 2px solid var(--dark-blue);
+    background-color: var(--dark-blue);
+    width: auto;
+    display: block;
+    margin-left: auto;
+}
+.addCommentBtn:hover
+{
+    color: var(--dark-blue);
+    background-color: transparent;
+    border: 2px solid var(--dark-blue);
+
+}
+.row1
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+                                                            /* Post */
+.addPost
+{
+    display: block;
+    width: auto;
+    margin-left: auto;
+    color: var(--white);
+    background-color: var(--dark-blue);
+    border: 2px solid var(--dark-blue);
+}
+.addPost:hover
+{
+    color: var(--dark-blue);
+    background-color: transparent;
+}
+.row2, .row3
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: right;
+}
+.form-check-label
+{
+    margin-right: 30px;
+}
+.buttonToSend
+{
+    background-color: var(--light-blue);
+    color: var(--white);
+    border: 2px solid var(--light-blue);
+}
+.buttonToSend:hover
+{
+    color: var(--light-blue);
+    background-color: transparent;
+}
+                                                            /* Worker */
+.addWorkerBtn
+{
+    display: block;
+    width: auto;
+    margin-left: auto;
+    color: var(--white);
+    background-color: var(--dark-blue);
+    border: 2px solid var(--dark-blue);
+}
+.addWorkerBtn:hover
+{
+    color: var(--dark-blue);
+    background-color: transparent;
+}
+                                                            /* Media for Home page */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px)
+{
+    #header p a
+    {
+        position: absolute;
+        top: 59% !important;
+        left: 60%;
+        transform: translate(0%,-59%) !important;
+        font-size: 2rem;
+        border: 3px solid var(--red);
+        padding: 10px 20px;
+        transition: all 0.3s ease-in-out;
+    }
+    #header h1
+    {
+        font-size: 3rem;
+    }
+    #header h1::after
+    {
+        height: 150px;
+        width: 150px;
+    }
+    #headerTitle h1
+    {
+        font-size: 3rem;
+    }
+    #headerTitle h1::after
+    {
+        height: 150px;
+        width: 150px;
+    }
+    #header p a
+    {
+        top: 60%;
+        left: 60%;
+        transform: translate(0%,-63.5%);
+        font-size: 1rem;
+        border: 2px solid var(--red);
+        padding: 3px 7px;
+    }
+                                                                /* About */
+    .aboutHolder
+    {
+        width: 90%;
+        padding: 20px;
+    }
+    .aboutHolder::after
+    {
+        top: -15%;
+        right: -7%;
+        height: 400px;
+        width: 100px;
+    }
+    .aboutHolder p.title
+    {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .aboutHolder p:last-child
+    {
+        font-size: 1rem;
+        line-height: 1.7rem;
+    }
+    
+                                                                /* Guid */
+    .articleHolder
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        width: 100%;
+        height: 1400px;
+        padding-top: 100px;
+        margin-top: 300px;
+    }
+    .article
+    {
+        color: black;
+        background-color: white;
+        width: 90%;
+        position: relative;
+        margin-bottom: 300px;
+    }
+    .article img
+    {
+        max-width: 100%;
+        height: 250px;
+    }
+    .articleInner
+    {
+        padding: 10px;
+    }
+    .articleInner p:first-child::after
+    {
+        margin-top: 7px;
+        margin-bottom: 10px;
+    }
+    .articleInner p:nth-child(2)
+    {
+        font-size: 1rem;
+    }
+    .articleInner button
+    {
+        margin-top: 10px;
+    }
+    
+                                                                /* Contact */
+    #contact
+    {
+        margin-top: 330px;
+    }
+    .contactHolder
+    {
+        width: 90%;
+        padding: 20px;
+    }
+    .contactHolder::after
+    {
+        top: -9%;
+        right: -7%;
+        height: 800px;
+    }
+    .contactHolder p.title
+    {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .contactHolder form
+    {
+        text-align: right;
+    }
+    .contactHolder form input[name="submit"]
+    {
+        font-size: 1.2rem;
+        display: block;
+        padding: 0px 20px;
+        margin: 30px auto 0 auto;
+    }
+
+                                                                /* Location */
+    #location
+    {
+        margin-top: 330px;
+    }
+    .locationHolder
+    {
+        width: 90%;
+        padding: 20px;
+    }
+    .locationHolder::after
+    {
+        top: -10%;
+        right: -7%;
+        height: 100px;
+        width: 200px;
+    }
+    .locationHolder p.title
+    {
+        color: var(--white);
+        font-size: 2.5rem;
+    }
+    #map
+    {
+        height: 400px !important;
+    }
+                                                                /* Footer */
+
+    .footerHolder
+    {
+        position: absolute;
+        top: 43%;
+        left: 50%;
+        transform: translate(-50%,-43%);
+        color: var(--white);
+        font-size: 0.8rem !important;
+    }
+    .leftSide, .rightSide
+    {
+        padding: 10px;
+    }
+    .leftSide p, .rightSide p
+    {
+        font-size: 0.8rem;
+    }
+    .leftSide p.title, .rightSide p.title
+    {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    .rightSide p.title:nth-last-child(2)
+    {
+        margin-top: 30px;
+    }
+    .socialMedia
+    {
+        width: 50%;
+        font-size: 1rem;
+    }
+    .mine
+    {
+        font-size: 0.8rem;
+    }
+    .mixBar div button
+    {
+        font-size: 0.6rem;
+    }
+    .holder
+    {
+        height: 20rem;
+    }
+    .subHolder p
+    {
+        font-size: 1.2rem;
+        margin: 0.1rem 0 0 0;
+    }
+    .subHolder span
+    {
+        margin-bottom: 0.3rem;
+    }
+    .subHolder div span:nth-child(1)
+    {
+        font-size: 0.7rem;
+    }
+    .subHolder div span:nth-child(2)
+    {
+        font-size: 0.4rem;
+    }
+    .mix a
+    {
+         height: 20rem;
+    }
+    .leftDetail img
+    {
+        margin-top: 130px;
+        width: 70%;
+        height: 18rem;
+        margin-bottom: 40px;
+    }
+    .rightDetail p
+    {
+        width: 20rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .rightDetail .submit
+    {
+        width: 5.8rem !important;
+        font-size: 0.75rem;
+    }
+    .rightDetail span
+    {
+        margin-top: 1rem;
+        font-size: 0.7rem;
+    }
+    .shopImg
+    {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+    .shopCover
+    {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .shopHolder .row
+    {
+        height: 800px;
+    }
+    .bigPCart
+    {
+        font-size: 2.2rem;
+        position: absolute;
+        top: 1%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 0;
+    }
+    .totalSum
+    {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .deleteCart img
+    {
+        width: 30px;
+        height: 30px;
+    }
+    .finalHolder
+    {
+        position: relative;
+        color: var(--white);
+        padding: 50px 30px;
+    }
+    .paymentCards img
+    {
+        width: 90%;
+    }
+    .paymentCards img:first-child
+    {
+        margin-top: 50px;
+    }
+    .FinalContent p
+    {
+        font-size: 1rem;
+    }
+    .FinalSubContent span
+    {
+        font-size: 1rem;
+    }
+    .finalHolder::before
+    {
+        top: -3%;
+        right: -7%;
+        transform: translate(0%,0%);
+        height: 300px;
+        width: 300px;
+    }
+    .finalHolder::after
+    {
+        bottom: -3%;
+        left: -7%;
+        transform: translate(0%,0%);
+        height: 300px;
+        width: 300px;
+    }
+    .registerHolder
+    {
+        position: relative;
+        width: 100%;
+        height: 700px;
+        padding: 30px;
+        z-index: 1;
+        margin: auto;
+        color: var(--white);
+    }
+    .registerContainer
+    {
+        background-color: var(--light-blue);
+        padding: 10px;
+        width: 90%;
+    }
+    .pToggle
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: var(--red);
+        font-size: 1rem;
+        background-color: var(--light-blue);
+        padding: 10px;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        margin: 0;
+        z-index: 1;
+    }
+    .pTitle
+    {
+        font-size: 2rem;
+        color: var(--white);
+        margin-bottom: 30px;
+        text-align: center;
+        display: inline-block;
+    }
+    .registerHolder form
+    {
+        width: 65%;
+        margin: auto;
+        direction: rtl;
+        text-align: right;
+    }
+    .registerHolder form .paddingForFail
+    {
+        margin-bottom: 20px;
+    }
+    .registerHolder form button
+    {
+        display: block;
+        width: auto;
+        color: var(--white);
+        background-color: var(--red);
+        margin: auto !important;
+        border: 2px solid var(--red);
+        transition: all 0.2s ease-in-out;
+        opacity: 0.9;
+        border-radius: 0;
+        font-size: 1rem;
+        padding: 5px 15px;
+    }
+    .noItems p
+    {
+        font-size: 1rem;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px)
+{
+    .articleHolder
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        width: 100%;
+        height: 1400px;
+        padding-top: 100px;
+        margin-top: 300px;
+    }
+    #header h1
+    {
+        font-size: 4rem;
+    }
+    #header p a
+    {
+        top: 62%;
+        left: 60%;
+        transform: translate(0%,-63.5%);
+        font-size: 1.5rem;
+        border: 2px solid var(--red);
+        padding: 3px 7px;
+    }
+    #header h1::after
+    {
+        width: 250px;
+        height: 200px;
+    }
+    #header a
+    {
+        font-size: 3rem;
+    }
+    .article
+    {
+        color: black;
+        background-color: white;
+        width: 90%;
+        position: relative;
+        margin-bottom: 300px;
+    }
+    .article img
+    {
+        max-width: 100%;
+        height: 250px;
+    }
+    .articleInner
+    {
+        padding: 10px;
+    }
+    .articleInner p:first-child::after
+    {
+        margin-top: 7px;
+        margin-bottom: 10px;
+    }
+    .articleInner p:nth-child(2)
+    {
+        font-size: 1rem;
+    }
+    .articleInner button
+    {
+        margin-top: 10px;
+    }
+    .mixBar div button
+    {
+        font-size: 0.7rem;
+    }
+    .holder
+    {
+        height: 22rem;
+    }
+    #headerTitle h1
+    {
+        font-size: 3.5rem;
+    }
+    #headerTitle h1::after
+    {
+        height: 170px;
+        width: 190px;
+    }
+    .subHolder p
+    {
+        font-size: 1.4rem;
+        margin: 0.1rem 0 0 0;
+    }
+    .subHolder span
+    {
+        margin-bottom: 0.3rem;
+    }
+    .subHolder div span:nth-child(1)
+    {
+        font-size: 0.75rem;
+    }
+    .subHolder div span:nth-child(2)
+    {
+        font-size: 0.45rem;
+    }
+    .mix a
+    {
+         height: 22rem;
+    }
+    .leftDetail img
+    {
+        margin-top: 130px;
+        width: 65%;
+        height: 18rem;
+        margin-bottom: 40px;
+    }
+    .rightDetail p
+    {
+        width: 27rem;
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+    .rightDetail .submit
+    {
+        width: 6rem !important;
+        font-size: 0.8rem;
+    }
+    .rightDetail span
+    {
+        margin-top: 1rem;
+        font-size: 0.75rem;
+    }
+    .shopImg
+    {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+    .shopCover
+    {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .shopHolder .row
+    {
+        height: 800px;
+    }
+    .bigPCart
+    {
+        font-size: 3rem;
+        position: absolute;
+        top: 1%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 0;
+    }
+    .totalSum
+    {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .deleteCart img
+    {
+        width: 30px;
+        height: 30px;
+    }
+    .finalHolder
+    {
+        position: relative;
+        color: var(--white);
+        padding: 50px 30px;
+    }
+    .paymentCards img
+    {
+        width: 75%;
+    }
+    .paymentCards img:first-child
+    {
+        margin-top: 50px;
+    }
+    .FinalContent p
+    {
+        font-size: 1.1rem;
+    }
+    .FinalSubContent span
+    {
+        font-size: 1.1rem;
+    }
+    .finalHolder::before
+    {
+        top: -3%;
+        right: -7%;
+        transform: translate(0%,0%);
+        height: 300px;
+        width: 300px;
+    }
+    .finalHolder::after
+    {
+        bottom: -3%;
+        left: -7%;
+        transform: translate(0%,0%);
+        height: 300px;
+        width: 300px;
+    }
+    .registerHolder
+    {
+        position: relative;
+        width: 100%;
+        height: 700px;
+        padding: 30px;
+        z-index: 1;
+        margin: auto;
+        color: var(--white);
+    }
+    .registerContainer
+    {
+        background-color: var(--light-blue);
+        padding: 20px;
+        width: 75%;
+    }
+    .pToggle
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: var(--red);
+        font-size: 1rem;
+        background-color: var(--light-blue);
+        padding: 15px;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        margin: 0;
+        z-index: 1;
+    }
+    .pTitle
+    {
+        font-size: 2rem;
+        color: var(--white);
+        margin-bottom: 50px;
+        text-align: center;
+        display: inline-block;
+    }
+    .registerHolder form
+    {
+        width: 65%;
+        margin: auto;
+        direction: rtl;
+        text-align: right;
+    }
+    .registerHolder form .paddingForFail
+    {
+        margin-bottom: 30px;
+    }
+    .registerHolder form button
+    {
+        display: block;
+        width: auto;
+        color: var(--white);
+        background-color: var(--red);
+        margin: auto !important;
+        border: 2px solid var(--red);
+        transition: all 0.2s ease-in-out;
+        opacity: 0.9;
+        border-radius: 0;
+        font-size: 1.1rem;
+        padding: 5px 20px;
+    }
+    .noItems p
+    {
+        font-size: 1.2rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px)
+{
+    #header h1
+    {
+        color: var(--red);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        opacity: 0.9;
+        font-size: 6rem;
+    }
+    #headerTitle h1
+    {
+        font-size: 4rem;
+    }
+    #headerTitle h1::after
+    {
+        height: 180px;
+        width: 200px;
+    }
+    #header p a
+    {
+        top: 62%;
+        left: 63%;
+        transform: translate(0%,-62%);
+        font-size: 1.7rem;
+        border: 3px solid var(--red);
+        padding: 10px 20px;
+        transition: all 0.3s ease-in-out;
+    }
+    .article img
+    {
+        height: 200px;
+    }
+    .articleInner p:first-child
+    {
+        font-size: 1.6rem;
+    }
+    .articleInner p:nth-child(2)
+    {
+        font-size: 0.9rem;
+    }
+    .articleInner button
+    {
+        font-size: 0.9rem;
+    }
+    .leftSide p, .rightSide p
+    {
+        font-size: 1rem;
+    }
+    .leftSide p.title, .rightSide p.title
+    {
+        font-size: 2.2rem;
+        margin-bottom: 27px;
+    }
+    .socialMedia
+    {
+        font-size: 1.3rem;
+    }
+    .articleInner
+    {
+        padding: 15px;
+    }
+    .articleInner p:first-child::after
+    {
+        content: "";
+        display: block;
+        background-color: var(--dark-blue);
+        height: 2px;
+        margin-top: 7px;
+        margin-bottom: 8px;
+    }
+    .articleInner button
+    {
+        margin-top: 8px;
+    }
+    .aboutHolder::after
+    {
+        top: -16%;
+        right: -7%;
+        height: 420px;
+    }
+    .contactHolder::after
+    {
+        content: "";
+        position: absolute;
+        top: -8.5%;
+        right: -7%;
+        transform: translate(0%,0%);
+        z-index: -10;
+        height: 750px;
+        width: 100px;
+        background-color: var(--light-blue);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    }
+    .locationHolder::after
+    {
+        top: -9%;
+        right: -7%;
+        height: 100px;
+        width: 400px;
+    }
+    .mixBar div button
+    {
+        font-size: 0.8rem;
+    }
+    .holder
+    {
+        height: 25rem;
+    }
+    .subHolder p
+    {
+        font-size: 1.6rem;
+        margin: 0.1rem 0 0 0;
+    }
+    .subHolder span
+    {
+        margin-bottom: 0.3rem;
+    }
+    .subHolder div span:nth-child(1)
+    {
+        font-size: 0.8rem;
+    }
+    .subHolder div span:nth-child(2)
+    {
+        font-size: 0.5rem;
+    }
+    .mix a
+    {
+         height: 25rem;
+    }
+    .leftDetail img
+    {
+        width: 75%;
+        height: 20rem;
+    }
+    .rightDetail p
+    {
+        width: 20rem;
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+    }
+    .rightDetail .submit
+    {
+        width: 6.5rem !important;
+        font-size: 0.9rem;
+    }
+    .rightDetail span
+    {
+        margin-top: 1rem;
+        font-size: 0.8rem;
+    }
+    .shopHolder .row
+    {
+        height: 500px;
+    }
+    .bigPCart
+    {
+        font-size: 2.3rem;
+        position: absolute;
+        top: 3%;
+        left: 75%;
+        transform: translateX(-75%);
+        margin-bottom: 0;
+    }
+    .deleteCart img
+    {
+        width: 30px;
+        height: 30px;
+    }
+    .finalHolder
+    {
+        position: relative;
+        color: var(--white);
+        padding: 50px 50px;
+    }
+    .paymentCards img
+    {
+        width: 30%;
+        margin-top: 50px;
+    }
+    .FinalContent p
+    {
+        font-size: 1.3rem;
+    }
+    .FinalSubContent span
+    {
+        font-size: 1.3rem;
+    }
+    .registerContainer
+    {
+        background-color: var(--light-blue);
+        padding: 20px;
+        width: 75%;
+    }
+    .noItems p
+    {
+        font-size: 1.3rem;
+    }
+    
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px)
+{
+    #header p a
+    {
+        top: 60%;
+        left: 60%;
+        transform: translate(0%,-60%);
+        font-size: 2rem;
+        border: 3px solid var(--red);
+        padding: 10px 20px;
+        transition: all 0.3s ease-in-out;
+    }
+    #headerTitle h1
+    {
+        font-size: 4.5rem;
+    }
+    #headerTitle h1::after
+    {
+        height: 180px;
+        width: 200px;
+    }
+    .aboutHolder::after
+    {
+        top: -20%;
+        right: -7%;
+        height: 400px;
+    }
+    .contactHolder::after
+    {
+        content: "";
+        position: absolute;
+        top: -12%;
+        right: -7%;
+        transform: translate(0%,0%);
+        z-index: -10;
+        height: 750px;
+        width: 100px;
+        background-color: var(--light-blue);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    }
+    .locationHolder::after
+    {
+        top: -10%;
+        right: -7%;
+        height: 100px;
+        width: 400px;
+    }
+    .mixBar div button
+    {
+        font-size: 0.9rem;
+    }
+    .holder
+    {
+        height: 28rem;
+    }
+    .subHolder p
+    {
+        font-size: 1.8rem;
+        margin: 0.2rem 0 0 0;
+    }
+    .subHolder span
+    {
+        margin-bottom: 0.3rem;
+    }
+    .subHolder div span:nth-child(1)
+    {
+        font-size: 0.9rem;
+    }
+    .subHolder div span:nth-child(2)
+    {
+        font-size: 0.6rem;
+    }
+    .mix a
+    {
+         height: 28rem;
+    }
+    .leftDetail img
+    {
+        width: 75%;
+        height: 25rem;
+    }
+    .rightDetail p
+    {
+        width: 25rem;
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+    .rightDetail .submit
+    {
+        width: 7rem !important;
+        font-size: 1rem;
+    }
+    .rightDetail span
+    {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+    }
+    .bigPCart
+    {
+        font-size: 3.1rem;
+        position: absolute;
+        top: 3%;
+        left: 75%;
+        transform: translateX(-75%);
+        margin-bottom: 0;
+    }
+    .shopHolder .row
+    {
+        height: 600px;
+    }
+    .registerContainer
+    {
+        background-color: var(--light-blue);
+        padding: 20px;
+        width: 65%;
+    }
+    .noItems p
+    {
+        font-size: 1.4rem;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px)
+{
+
+}

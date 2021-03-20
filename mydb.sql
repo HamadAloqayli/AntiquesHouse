@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 29, 2020 at 02:08 PM
+-- Generation Time: Feb 17, 2021 at 07:47 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -78,8 +78,8 @@ CREATE TABLE IF NOT EXISTS `employee` (
 --
 
 INSERT INTO `employee` (`id`, `name`, `email`, `password`, `role`) VALUES
-(33, 'yazeed', 'yazeed@gmail.com', '$2y$10$cUyKDaMWksz78S5PgOc29.dCVXs4K5rZo52nRnzBNsT2YLReQ7Zx6', 'worker'),
-(54, 'hamad', 'hamad@gmail.com', '$2y$10$cUyKDaMWksz78S5PgOc29.dCVXs4K5rZo52nRnzBNsT2YLReQ7Zx6', 'admin');
+(33, 'ÙƒÙ…Ø§Ù„', 'ageeele@gmail.com', '$2y$10$nMtBePNBSmvBQV9CF/QeBOCKgxnoB88Nn2X6SC/wRy4i/Pf2W5S8y', 'worker'),
+(54, 'Ø¨Ø¯Ø±', 'aqeele@gmail.com', '$2y$10$kshYTZrs2lxWShet00P90..m9ppeUxG6A/Oj7/e4.g1Z7.HE5jFBK', 'admin');
 
 -- --------------------------------------------------------
 
@@ -98,7 +98,7 @@ CREATE TABLE IF NOT EXISTS `orderr` (
   KEY `Eid` (`Eid`),
   KEY `Pid` (`Pid`),
   KEY `Eid_2` (`Eid`)
-) ENGINE=MyISAM AUTO_INCREMENT=850 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=858 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -115,7 +115,7 @@ CREATE TABLE IF NOT EXISTS `post` (
   `category` varchar(100) NOT NULL,
   `price` int(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=129 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=137 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -131,14 +131,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `password` varchar(100) NOT NULL,
   `phone` int(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`id`, `name`, `email`, `password`, `phone`) VALUES
-(31, 'Ø­Ù…Ø¯ Ø§Ù„Ø¹Ù‚ÙŠÙ„ÙŠ', 'hmd@gmail.com', '$2y$10$wNluErGltHtTa8y7Gq.UX.zbZR41wT/KUexCmKC013wk8QxSC29VK', 555555555);
+) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
